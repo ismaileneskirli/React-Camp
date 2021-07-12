@@ -15,7 +15,7 @@ export default function ProductList() {
       .getProducts()
       //if get method is successfull then for each result use setProduct method
       .then((result) => setProducts(result.data.data));
-  });
+  }, []);
 
   return (
     <div>
