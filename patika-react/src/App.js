@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import User from "./components/User";
+const friends = ["Ahmet", "Mehmet", "Ayşe", "Fatma"];
 function App() {
+  // conditional render
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <User
+        name="enes"
+        surname="Kırlı"
+        isLoggedIn={true}
+        friends={friends}
+        age={10}
+        address={{
+          title: "İstanbul/Ümraniye",
+          zip: "34",
+        }}
+      />
+      ;
     </div>
   );
 }
