@@ -21,3 +21,28 @@
 * PropTypes.shape ( for defining the type of each element of the objects )
 
 * if there is no value assigned for props, default value can be assigned with defaultProps method
+
+## STATES
+
+- What is state ?
+
+State keeps variables that can change.
+When state changes component get re-rendered.
+First thing to look at when working with states is to look at state type.
+
+USAGE:
+
+const [var, setVar] = useState
+
+<button onClick={()=>setVar()}>Click me <button/>
+
+- Array states :
+
+If initial value of state is array, you need to pass array afterwards
+
+- ... notation usage :
+
+const [friends, setFriends] = useState(["sdad","adas"])
+setFriends([...friends, "ayşe"])
+
+- Object states
