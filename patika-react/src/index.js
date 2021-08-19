@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-//import App from "./App";
+import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-//import Counter from "./components/Counter";
+import Counter from "./components/Counter";
 
 import InputExample from "./components/InputExample";
 
 ReactDOM.render(
   <React.StrictMode>
-    <InputExample />
+    <App />
   </React.StrictMode>,
   document.getElementById("root")
 );

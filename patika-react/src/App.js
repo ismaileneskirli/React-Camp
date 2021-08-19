@@ -1,17 +1,27 @@
 import "./App.css";
 import User from "./components/User";
 import { useState } from "react";
+import Counter from "./components/Counter";
 // const friends = ["Ahmet", "Mehmet", "Ayşe", "Fatma"];
 // state and props lessons
 function App() {
   // mehmet is inital value of name
-  const [name, setName] = useState("Mehmet");
-  const [friends, setFriends] = useState(["Ahmet", "Murat"]);
-  const [user, setUser] = useState({ name: "no name", age: 0 });
+  // const [name, setName] = useState("Mehmet");
+  // const [friends, setFriends] = useState(["Ahmet", "Murat"]);
+  // const [user, setUser] = useState({ name: "no name", age: 0 });
+
+  const [isVisible, setIsVisible] = useState(true);
   return (
     // conditional render
     <div>
-      <User
+      {isVisible && <Counter />}
+
+      <br />
+
+      <button onClick={() => setIsVisible(!isVisible)}>
+        On and off counter
+      </button>
+      {/* <User
         name={name}
         surname="Kırlı"
         isLoggedIn={true}
@@ -31,7 +41,7 @@ function App() {
       <button onClick={() => setUser({ ...user, name: "enes" })}>
         {" "}
         Change user name
-      </button>
+      </button> */}
     </div>
   );
 }

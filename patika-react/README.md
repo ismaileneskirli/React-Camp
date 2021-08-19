@@ -30,7 +30,7 @@ State keeps variables that can change.
 When state changes component get re-rendered.
 First thing to look at when working with states is to look at state type.
 
-USAGE:
+### USAGE:
 
 const [var, setVar] = useState
 
@@ -46,3 +46,23 @@ const [friends, setFriends] = useState(["sdad","adas"])
 setFriends([...friends, "ayşe"])
 
 - Object states
+
+## Lifecycle - useEffect
+
+How to catch an event ? How to understand when state changes ?
+
+useEffect :
+
+- shuld not be controlled with if condition.
+- useEffect runs on every state change.
+- use [stateName] to only run for that specific state.
+
+### Usage :
+
+// whenever number is updated call this function
+useEffect(() => {
+console.log("price component updated");
+setPrice(number \* 5);
+}, [number]);
+
+// so whenevet setNumber hook is used, this function will work and will update the price
