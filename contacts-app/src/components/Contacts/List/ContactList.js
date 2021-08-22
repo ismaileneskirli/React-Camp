@@ -14,7 +14,21 @@ export default function ContactList({ contacts }) {
   console.log("filtered", filtered);
   return (
     <div>
-      <h2>Your contacts :</h2>
+      <div
+        style={
+          // css inline styles
+          {
+            fontStyle: "oblique",
+            backgroundColor: "pink",
+            padding: "8px",
+            margin: "2em",
+            textAlign: "center",
+            color: "white",
+          }
+        }
+      >
+        <h2>Your contacts :</h2>
+      </div>
       <ul className="list">
         {filtered.map((contact, index) => (
           <li key={index}>
